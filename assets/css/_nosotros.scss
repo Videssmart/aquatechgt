@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$fuentePrimaria: "DM Sans", sans-serif;
+$colorPrimario: rgba(255,255,255,255);
+$colorSecundario: rgba(0,34,61,255);
+$colorIconos: rgba(2,99,175,255);
+$colorTitulos: rgba(8,15,32,255);
+$colorBotones: rgba(8,15,32,255);
+$colorDetalles: rgba(56,189,248,255); 
+$fondoNo2: rgb(238, 243, 243);
+$colorLetra: rgb(16, 16, 70);
+$colorLetraSecundario: rgb(44, 44, 44);
+.nosotros{
+    background-color: $fondoNo2;
+    @media screen and (max-width: 600px){
+        background-color: $colorPrimario;
+    }  
+    @media screen and (max-width: 400px){
+        padding-top: 4.5vw;
+    }
+}
+.historia{
+    padding: 4vw 3vw 2vw 3vw;
+    .historiaContainer{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        @media screen and (max-width: 900px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .historiaContainerTexto{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-right: 2vw;
+            h3{
+                font-family: $fuentePrimaria;
+                font-weight: 900;
+                font-size: 2.5rem;
+                color: $colorSecundario;
+            }
+            p{
+                font-family: $fuentePrimaria;
+                font-weight: 500;
+                font-size: 1rem;
+                color: $colorLetra;
+            }
+        }
+        .historiaContainerImagen{
+            .img2{
+                display: none;
+                @media screen and (max-width: 900px){
+                    display: block;
+                }
+            }
+            img{
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+                @media screen and (max-width: 900px){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+.valores{
+    padding: 4vw 3vw 2vw 3vw;
+    background-color: $fondoNo2;
+    .valoresCards{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2vw 3vw 2vw 3vw;
+        text-align: center;
+        gap: 30px;
+        @media screen and (max-width: 900px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .valoresCardsCard{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border-radius: 10px;
+            background-color: $colorPrimario;
+            transition: all .3s ease-in-out;
+            &:hover{
+                box-shadow: rgba(45, 127, 141, 0.3) 0px 19px 38px, rgba(42, 103, 194, 0.22) 0px 15px 12px;
+            }
+            img{
+                width: 5vw;
+                @media screen and (max-width: 900px){
+                    width: 60px;
+                }
+            }
+            h4{
+                font-family: $fuentePrimaria;
+                color: $colorSecundario;
+                font-weight: 700;
+                @media screen and (max-width: 900px){
+                    font-size: 1.8rem;
+                }
+            }
+            p{
+                font-family: $fuentePrimaria;
+                color: $colorLetra;
+                font-weight: 500;
+                @media screen and (max-width: 900px){
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+
+.choose{
+    padding-bottom: 5vw;
+    .container{
+        .row{
+            @media screen and (max-width: 550px){
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                align-items: center;
+                width: 100%;
+            }
+            .col-6{
+                @media screen and (max-width: 550px){
+                    width: 100%;
+                }
+                .p-3{
+                    text-align: left;
+                    @media screen and (max-width: 550px){
+                        width: 100%;
+                    }
+                    h4{
+                        font-family: $fuentePrimaria;
+                        color: $colorLetra;
+                        font-weight: 600;
+                        span{
+                            position: relative;
+                            top: 5px;
+                            margin-right: 5px;
+                            color: $colorDetalles;
+                        }
+                    }
+                    p{
+                        font-family: $fuentePrimaria;
+                        font-weight: 500;
+                        color: $colorLetra;
+
+                    }
+                }
+            }
+        }
+    }
+}

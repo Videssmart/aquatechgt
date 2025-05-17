@@ -1,0 +1,126 @@
+@import 'footer';
+@import 'header';
+@import 'inicio';
+@import 'nosotros';
+@import 'servicios';
+@import 'proyectos';
+@import 'contacto';
+@import 'carrito';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$fuentePrimaria: "DM Sans", sans-serif;
+$colorPrimario: rgba(255, 255, 255, 255);
+$colorSecundario: rgba(0, 34, 61, 255);
+$colorIconos: rgba(2, 99, 175, 255);
+$colorTitulos: rgba(8, 15, 32, 255);
+$colorBotones: rgba(8, 15, 32, 255);
+$colorDetalles: rgba(56, 189, 248, 255);
+$fondoNo2: rgb(223, 237, 243);
+$colorLetra: rgb(16, 16, 70);
+$colorLetraSecundario: rgb(44, 44, 44);
+
+body {
+    overflow-x: hidden;
+}
+
+.botonesAqua {
+    border: none;
+    border-radius: 5px;
+    background-color: $colorIconos;
+    font-family: $fuentePrimaria;
+    font-weight: 600;
+    color: $colorPrimario;
+    padding: 1vw;
+    transition: all .3s ease-in-out;
+    &:hover{
+        background-color: $colorSecundario;
+        border: solid 1px $colorPrimario;
+    }
+}
+
+.subTitles {
+    font-family: $fuentePrimaria;
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: $colorSecundario;
+    margin-bottom: 1.5vw;
+
+    @media screen and (max-width: 550px) {
+        font-size: 2rem;
+        padding-block: 3vw;
+    }
+
+}
+
+.subTitles2 {
+    font-family: $fuentePrimaria;
+    text-align: center;
+    font-weight: 900;
+    color: $colorTitulos;
+    font-size: 4rem;
+    padding-block: 4vw;
+
+    @media screen and (max-width: 700px) {
+        font-size: 3rem;
+    }
+}
+
+.subTitles3 {
+    font-family: $fuentePrimaria;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.3rem;
+    color: $colorIconos;
+    padding-block: 3vw;
+
+    @media screen and (max-width: 700px) {
+        font-size: 1.8rem;
+    }
+}
+
+.subTitles4 {
+    font-family: $fuentePrimaria;
+    font-weight: 700;
+    text-align: left;
+    font-size: 2.1rem;
+    color: $colorIconos;
+    padding-block: 3vw;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.5rem;
+    }
+}
+
+.parrafos {
+    font-family: $fuentePrimaria;
+    color: $colorLetra;
+    font-weight: 500;
+}
+
+.botonWp {
+    position: fixed;
+    width: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    filter: drop-shadow(rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px);
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.containerMensajeCarrito{
+    margin-inline: 10vw;
+    .alert{
+        border: none;
+        background-color: $colorIconos;
+        font-family: $fuentePrimaria;
+        color: $colorPrimario;
+        font-weight: 800;
+        a{
+            color: $colorDetalles;
+        }
+    }
+}

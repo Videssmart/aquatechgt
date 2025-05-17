@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$fuentePrimaria: "DM Sans", sans-serif;
+$colorPrimario: rgba(255,255,255,255);
+$colorSecundario: rgba(0,34,61,255);
+$colorIconos: rgba(2,99,175,255);
+$colorTitulos: rgba(8,15,32,255);
+$colorBotones: rgba(8,15,32,255);
+$colorDetalles: rgba(56,189,248,255); 
+$fondoNo2: rgb(223, 237, 243);
+$colorLetra: rgb(16, 16, 70);
+$colorLetraSecundario: rgb(44, 44, 44);
+
+.servicios{
+    background-color: $fondoNo2;
+    @media screen and (max-width: 600px){
+        background-color: $colorPrimario;
+    }  
+    @media screen and (max-width: 400px){
+        padding-top: 4.5vw;
+    }
+}
+.soluciones{
+    .solucionesContainer{
+        span{
+            padding-left: 2vw;
+            margin-right: 1vw;
+            position: relative;
+            bottom: 2px;
+            img{
+                width: 50px;
+                @media screen and (max-width: 600px){
+                    width: 30px;
+                }
+            }
+        }
+        .solucionesContainerCards{
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding-inline: 3vw;
+            padding-bottom: 4vw;
+            @media screen and (max-width: 800px){
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .solucionesContainerCardsCard{
+                padding: 4vw;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                border-radius: 10px;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+                }
+                h4{
+                    font-family: $fuentePrimaria;
+                    font-weight: 700;
+                    color: $colorIconos;
+                }
+                p{
+                    font-family: $fuentePrimaria;
+                    color: $colorLetra;
+                }
+            }
+        }
+    }
+}

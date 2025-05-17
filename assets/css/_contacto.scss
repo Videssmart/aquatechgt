@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$fuentePrimaria: "DM Sans", sans-serif;
+$colorPrimario: rgba(255, 255, 255, 255);
+$colorSecundario: rgba(0, 34, 61, 255);
+$colorIconos: rgba(2, 99, 175, 255);
+$colorTitulos: rgba(8, 15, 32, 255);
+$colorBotones: rgba(8, 15, 32, 255);
+$colorDetalles: rgba(56, 189, 248, 255);
+$fondoNo2: rgb(223, 237, 243);
+$bordes: rgb(141, 212, 243);
+$colorLetra: rgb(16, 16, 70);
+$colorLetraSecundario: rgb(44, 44, 44);
+
+.contactoTitulo {
+    background-color: $fondoNo2;
+    @media screen and (max-width: 600px){
+        background-color: $colorPrimario;
+    }  
+    @media screen and (max-width: 400px){
+        padding-top: 4.5vw;
+    }
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5vw;
+
+    form {
+        box-shadow: rgba(63, 150, 150, 0.685) 0px 1px 3px 0px, rgba(68, 147, 226, 0.11) 0px 0px 0px 1px;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 5px;
+        padding-block: 5vw;
+        padding-inline: 5vw;
+        border-radius: 10px;
+        @media screen and (max-width: 700px){
+            width: 80vw;
+        }  
+
+        label {
+            text-align: left;
+            font-family: $fuentePrimaria;
+            font-weight: 700;
+            color: $colorLetraSecundario;
+            font-size: 1rem;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 2vw;
+            border: solid 1px $bordes;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border: 2px solid #00bfff;
+            outline: none;
+        }
+
+        textarea {
+            width: 100%;
+            height: 20vw;
+            margin-bottom: 2vw;
+            border: solid 1px $bordes;
+            border-radius: 5px;
+        }
+        textarea:focus{
+            border: 2px solid #00bfff;
+            outline: none;
+        }
+        input[type="submit"]{
+            background-color: $colorIconos;
+            font-family: $fuentePrimaria;
+            font-weight: 700;
+            color: $colorPrimario;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background-color: $colorSecundario;
+            }
+        }
+    }
+}

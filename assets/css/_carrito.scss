@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$fuentePrimaria: "DM Sans", sans-serif;
+$colorPrimario: rgba(255, 255, 255, 255);
+$colorSecundario: rgba(0, 34, 61, 255);
+$colorIconos: rgba(2, 99, 175, 255);
+$colorTitulos: rgba(8, 15, 32, 255);
+$colorBotones: rgba(8, 15, 32, 255);
+$colorDetalles: rgba(56, 189, 248, 255);
+$fondoNo2: rgb(223, 237, 243);
+$colorLetra: rgb(16, 16, 70);
+$colorLetraSecundario: rgb(44, 44, 44);
+
+.carritoTitulo {
+    text-align: center;
+
+    p {
+        font-family: $fuentePrimaria;
+        font-weight: 500;
+        color: $colorLetraSecundario;
+        font-size: 1.3rem;
+    }
+}
+
+
+.carritoPage {
+    margin-block: 3vw;
+    margin-bottom: 5vw;
+
+    .container {
+        .containerCarrito {
+            .productosCarrito {
+                .productoCarrito {
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    padding: 1vw 1vw 1vw 1vw;
+                    border-radius: 10px;
+                    height: 25vh;
+                    width: 100%;
+                    margin-bottom: 2vw;
+
+                    @media screen and (max-width: 1200px) {
+                        height: 20vh;
+                    }
+
+                    @media screen and (max-width: 575px) {
+                        text-align: center;
+                    }
+
+
+                    .imagenProductoCarrito {
+                        background-size: cover;
+                        background-position: center;
+                        height: 15vh;
+                        width: 10%;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        border-radius: 5px;
+                        position: relative;
+                        top: 20px;
+
+                        @media screen and (max-width: 900px) {
+                            width: 12%;
+                            height: 12vw;
+                        }
+
+                        @media screen and (max-width: 575px) {
+                            display: none;
+                        }
+                    }
+
+                    .descProductoCarrito {
+                        position: relative;
+                        top: 1vw;
+
+                        @media screen and (max-width: 575px) {}
+
+                        .contenedorDesc {
+                            margin-left: 2vw;
+
+                            .textoDetalles {
+                                display: flex;
+                                justify-content: space-between;
+                                gap: 20px;
+                                text-align: left;
+
+                                .textoDetallesContainer {
+                                    h6 {
+                                        font-family: $fuentePrimaria;
+                                        font-size: 1.2rem;
+                                        color: $colorIconos;
+                                        font-weight: 700;
+                                    }
+
+                                    p {
+                                        font-family: $fuentePrimaria;
+                                        color: $colorLetra;
+                                        font-weight: 500;
+
+                                    }
+                                }
+
+                                .textoDetallesEliminar {
+                                    button { 
+                                        font-size: 1.3rem;
+                                        border: none;
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+
+                            .precioCantidad {
+                                display: flex;
+                                justify-content: space-between;
+
+                                .precio {
+                                    font-family: $fuentePrimaria;
+                                    font-weight: 700;
+                                    color: $colorIconos;
+                                }
+
+                                .cantidad {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 20px;
+                                    border: 1px $colorDetalles solid;
+                                    font-family: $fuentePrimaria;
+                                    font-weight: 700;
+                                    border-radius: 10px;
+                                    width: 3vw;
+
+                                    button {
+                                        border: none;
+                                        background-color: transparent;
+                                        font-family: $fuentePrimaria;
+                                        font-weight: 700;
+                                        padding: .5vw;
+                                        color: $colorIconos;
+                                    }
+                                }
+
+                                .subtotal {
+                                    font-family: $fuentePrimaria;
+                                    font-weight: 700;
+                                    color: $colorIconos;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pedido {
+    background-color: $fondoNo2;
+    padding: 2vw;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+
+    h5 {
+        font-family: $fuentePrimaria;
+        font-size: 1.2rem;
+        color: $colorIconos;
+        font-weight: 700;
+    }
+
+    .containerPedido {
+        display: flex;
+        justify-content: space-between;
+
+        .t1,
+        .t3,
+        .t5,
+        .t7 {
+            font-family: $fuentePrimaria;
+            font-weight: 500;
+            color: $colorLetraSecundario;
+        }
+
+        .t2,
+        .t4,
+        .t6,
+        .t8 {
+            font-family: $fuentePrimaria;
+            font-weight: 400;
+            color: $colorIconos;
+        }
+    }
+
+    .botonPedido {
+        text-align: center;
+        margin-block: 2vw;
+
+        a {
+            width: 20vw;
+
+            button {
+                width: 20vw;
+                background-color: $colorIconos;
+                border: none;
+                padding-block: 1vw;
+                border-radius: 10px;
+                font-family: $fuentePrimaria;
+                color: $colorPrimario;
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+.formularioPedido {
+    text-align: left;
+    padding-top: 2vw;
+
+    label {
+        font-family: $fuentePrimaria;
+        font-weight: 600;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 2vw;
+        border: solid 1px $bordes;
+        height: 30px;
+        border-radius: 5px;
+        font-family: $fuentePrimaria;
+        font-weight: 500;
+    }
+
+    input:focus {
+        border: 2px solid #00bfff;
+        outline: none;
+    }
+}

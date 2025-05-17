@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+$fuentePrimaria: "DM Sans", sans-serif;
+$colorPrimario: rgba(255,255,255,255);
+$colorSecundario: rgba(0,34,61,255);
+$colorIconos: rgba(2,99,175,255);
+$colorTitulos: rgba(8,15,32,255);
+$colorBotones: rgba(8,15,32,255);
+$colorDetalles: rgba(56,189,248,255); 
+$colorLetra: rgba(30,58,168,255);
+
+.static-top{
+    display: none;
+    @media screen and (max-width: 991px) {
+        display: block;
+    }
+    .navbar-toggler{
+        border-color: $colorPrimario;
+        @media screen and (max-width: 600px){
+            border-color: $colorBotones;
+        }  
+        .navbar-toggler-icon{
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            @media screen and (max-width: 600px){
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }  
+        }
+    }
+    .container-fluid{
+        .offcanvas{
+            .offcanvas-body{
+                .navbar-nav{
+                    .nav-item{
+                        a{
+                            font-family: $fuentePrimaria;
+                            font-weight: 900;
+                            font-size: 1.5rem;
+                            width: 70vw;
+                        }
+                    }
+                }
+            }
+            .offcanvas-header{
+                .offcanvas-title{
+                    font-family: $fuentePrimaria;
+                    color: $colorSecundario;
+                    font-weight: 900;
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 35vw;
+    background: url('../img/bannerInicio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+
+    .infoHeader{
+        position: relative;
+        top: 6vw;
+        margin-left: 2vw;
+        h1{
+            font-family: $fuentePrimaria;
+            font-weight: 900;
+            font-size: 4vw;
+            width: 70vw;
+        }
+    }
+    @media screen and (max-width: 850px) {
+        height: 45vw;
+        .infoHeader{
+            h1{
+                width: 90vw;
+                margin-bottom: 3vw;
+            }
+        }
+    }
+    @media screen and (max-width: 500px){
+        height: 55vw;
+        .infoHeader{
+            font-size: .9rem;
+            a{
+                button{
+                    padding: 2vw;
+                }
+            }
+        }
+    }
+}
+#navbarPc{
+    background-color: transparent;
+    @media screen and (max-width: 991px){
+        display: none;
+    } 
+    .container-fluid{
+        background-color: transparent;
+        .navbar-brand{
+            img{
+                width: 15%;
+            }
+        }
+        .navbar-collapse{
+            .navbar-nav{
+                display: flex;
+                gap: 20px;
+                .nav-item{
+                    .nav-link{
+                        color: $colorPrimario;
+                        font-family: $fuentePrimaria;
+                        font-weight: 700;
+                        font-size: 1.7vw;
+                        transition: all .3s ease-in-out;
+                        &:hover{
+                            color: $colorSecundario;
+                        }
+                    }
+                    .carrito{
+                        position: relative;
+                        top: 5px;
+                        font-size: 1.7vw;
+                    }
+                }
+            }
+        }
+    }   
+}
