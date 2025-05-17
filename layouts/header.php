@@ -18,7 +18,7 @@ $seccion = $_GET['seccion'] ?? 'inicio';
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css'>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="shortcut icon" href="assets/img/logoAquatechgt.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/img/logoAquatechgt.png" type="image/png">
   <title>Aquatechgt</title>
 </head>
 
