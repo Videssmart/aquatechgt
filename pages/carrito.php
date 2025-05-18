@@ -82,7 +82,7 @@
                     <p class="t8">Q<?php echo number_format($total, 2); ?></p>
                 </div>
                 <form
-                    action="https://formspree.io/f/mwponpdz"
+                    action="https://formspree.io/f/xrbqjdrz" 
                     method="POST" class="formularioPedido">
                     <label for="email">Correo de contacto:</label>
                     <input type="email" name="email" class="form-control" type="email" placeholder="Correo Electrónico"
