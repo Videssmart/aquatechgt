@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 $fuentePrimaria: "DM Sans", sans-serif;
-$colorPrimario: rgba(255,255,255,255);
-$colorSecundario: rgba(0,34,61,255);
-$colorIconos: rgba(2,99,175,255);
-$colorTitulos: rgba(8,15,32,255);
-$colorBotones: rgba(8,15,32,255);
-$colorDetalles: rgba(56,189,248,255); 
+$colorPrimario: rgba(255, 255, 255, 255);
+$colorSecundario: rgba(0, 34, 61, 255);
+$colorIconos: rgba(2, 99, 175, 255);
+$colorTitulos: rgba(8, 15, 32, 255);
+$colorBotones: rgba(8, 15, 32, 255);
+$colorDetalles: rgba(56, 189, 248, 255);
 $colorLetra: rgb(16, 16, 70);
 $colorLetraSecundario: rgb(44, 44, 44);
 $colorBotonWhatsapp: rgb(82, 201, 82);
-.quieneSomos{
+
+.quieneSomos {
     padding: 4vw 3vw 2vw 3vw;
+
     @media screen and (max-width: 550px) {
         padding-block: 7vw;
     }
 }
-.servicios{
+
+.servicios {
     padding: 4vw 3vw 2vw 3vw;
-    .serviciosCards{
+
+    .serviciosCards {
         display: grid;
         justify-items: center;
         align-items: center;
@@ -25,10 +29,12 @@ $colorBotonWhatsapp: rgb(82, 201, 82);
         gap: 30px;
         padding-inline: 1vw;
         padding-block: 2vw;
+
         @media screen and (max-width: 1018px) {
             grid-template-columns: repeat(1, 1fr);
         }
-        .serviciosCardsCard{
+
+        .serviciosCardsCard {
             padding-inline: 2vw;
             height: 18vw;
             display: flex;
@@ -39,163 +45,240 @@ $colorBotonWhatsapp: rgb(82, 201, 82);
             box-shadow: rgba(10, 149, 204, 0.356) 0px 2px 4px;
             background-color: $colorPrimario;
             transition: all .3s ease-in-out;
-            &:hover{
+
+            &:hover {
                 transform: translateY(-5px);
             }
+
             @media screen and (max-width: 1018px) {
                 height: 20vw;
                 width: 90vw;
             }
+
             @media screen and (max-width: 700px) {
                 height: 30vw;
             }
+
             @media screen and (max-width: 500px) {
                 height: 50vw;
                 padding: 5vw;
             }
-            
-            .serviciosCardsCardIcon{
+
+            .serviciosCardsCardIcon {
                 color: $colorIconos;
                 font-size: 3rem;
+
                 @media screen and (max-width: 400px) {
                     font-size: 1.9rem;
                 }
             }
-            .serviciosCardsCardTitulo{
+
+            .serviciosCardsCardTitulo {
                 font-size: 1.2rem;
                 font-family: $fuentePrimaria;
                 font-weight: 800;
                 color: $colorSecundario;
             }
-            .serviciosCardsCardParrafo{
+
+            .serviciosCardsCardParrafo {
                 font-family: $fuentePrimaria;
                 font-weight: 500;
                 color: $colorLetra;
             }
-        
+
         }
     }
 }
-.productos{
+
+.productos {
     padding: 4vw 3vw 2vw 3vw;
-    .productosCards{
+
+    .productosCards {
         display: grid;
         justify-items: center;
         align-items: center;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+
         @media screen and (max-width: 800px) {
             grid-template-columns: repeat(2, 1fr);
         }
+
         @media screen and (max-width: 500px) {
             grid-template-columns: repeat(1, 1fr);
         }
-        .productosCardsCard{
+
+        .productosCardsCard {
             width: 100%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             border-radius: 0 0 5px 5px;
-            
-            .productosCardsCardImage{
+            height: 45vw;
+
+            @media screen and (max-width: 1100px) {
+                height: 60vw;
+            }
+
+            @media screen and (max-width: 800px) {
+                height: 70vh;
+            }
+
+            @media screen and (max-width: 500px) {
+                height: 160vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                height: 70vh;
+            }
+
+            .productosCardsCardImage {
                 height: 20vw;
                 width: 100%;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                border-radius: 5px 5px 0 0 ;
+                border-radius: 5px 5px 0 0;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
                 @media screen and (max-width: 800px) {
                     background-position-y: 0;
-                }
-                @media screen and (max-width: 500px) {
-                    height: 35vw;
+                    height: 30vh;
                 }
 
+                @media screen and (max-width: 500px) {
+                    height: 40vh;
+                }
+
+
             }
-            .productosCardsCardTitulo{
+
+            .productosCardsCardTitulo {
                 font-family: $fuentePrimaria;
                 font-weight: 800;
                 color: $colorLetra;
                 padding: 1.2vw 1vw 0 1vw;
             }
-            .productosCardsCardParrafo{
+
+            .productosCardsCardParrafo {
                 font-family: $fuentePrimaria;
                 font-weight: 500;
                 color: $colorLetraSecundario;
                 padding: 1.2vw 1vw 0 1vw;
+                position: absolute;
+                width: 30vw;
+
+                @media screen and (max-width: 800px) {
+                    width: 45vw;
+                }
+
+                @media screen and (max-width: 500px) {
+                    width: 90vw;
+                }
             }
-            .productosCardsCardPrecio{
+
+            .productosCardsCardPrecio {
                 display: flex;
                 justify-content: space-between;
                 padding: 1.2vw 1vw 1vw 1vw;
-                .precio{
+                position: relative;
+                top: 10vw;
+
+                @media screen and (max-width: 1100px) {
+                    top: 20vw;
+                }
+
+                @media screen and (max-width: 800px) {
+                    top: 35vw;
+                }
+
+                @media screen and (max-width: 500px) {
+                    padding-inline: 1vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    top: 40vw;
+                }
+
+                .precio {
                     font-family: $fuentePrimaria;
                     font-weight: 900;
                     font-size: 1.6vw;
                     margin: 0;
                     padding: 0;
+
                     @media screen and (max-width: 800px) {
                         font-size: 1.3rem;
                     }
                 }
-                .botonCarrito{
-                        border: none;
-                        border-radius: 5px;
-                        padding: .8vw;
-                        background-color: $colorIconos;
-                        color: $colorPrimario;
-                        transition: all .3s ease-in-out;
-                        &:hover{
-                            background-color: $colorSecundario;
-                        }
+
+                .botonCarrito {
+                    border: none;
+                    border-radius: 5px;
+                    padding: .8vw;
+                    background-color: $colorIconos;
+                    color: $colorPrimario;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        background-color: $colorSecundario;
                     }
+                }
             }
         }
     }
 }
 
 
-.cotizacion{
+.cotizacion {
     padding-block: 4vw;
     margin-block: 5vw;
     background-color: $colorIconos;
-    .cotizacionElementos{
+
+    .cotizacionElementos {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
         width: 100%;
-        .cotizacionElementosTitulo{
+
+        .cotizacionElementosTitulo {
             text-align: center;
             font-family: $fuentePrimaria;
             font-weight: 900;
             color: $colorPrimario;
             margin: 0;
             font-size: 2rem;
-            @media screen and (max-width: 500px){
+
+            @media screen and (max-width: 500px) {
                 font-size: 1.5rem;
             }
-            .cotizacionElementosTituloIcono{
+
+            .cotizacionElementosTituloIcono {
                 margin-right: 1vw;
-                img{
+
+                img {
                     width: 4vw;
-                    @media screen and (max-width: 500px){
+
+                    @media screen and (max-width: 500px) {
                         width: 7vw;
                     }
                 }
             }
         }
-        .cotizacionElementosParrafo{
+
+        .cotizacionElementosParrafo {
             font-family: $fuentePrimaria;
             font-weight: 500;
             font-size: 1.6rem;
             color: $colorPrimario;
-            @media screen and (max-width: 500px){
+
+            @media screen and (max-width: 500px) {
                 font-size: 1rem;
             }
         }
-        .cotizacionElementosLink{
-            button{
+
+        .cotizacionElementosLink {
+            button {
                 border: 0;
                 border-radius: 5px;
                 padding: .5vw 2vw .5vw 2vw;
@@ -203,13 +286,15 @@ $colorBotonWhatsapp: rgb(82, 201, 82);
                 color: $colorPrimario;
                 font-size: 1.3rem;
                 transition: all .3s ease-in-out;
+
                 @media screen and (max-width: 500px) {
                     padding: 2vw 4.5vw 2vw 4.5vw;
                 }
-                &:hover{
+
+                &:hover {
                     background-color: green;
                 }
             }
         }
-    } 
+    }
 }

@@ -498,7 +498,20 @@ header {
     .productos .productosCards .productosCardsCard {
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      border-radius: 0 0 5px 5px; }
+      border-radius: 0 0 5px 5px;
+      height: 45vw; }
+      @media screen and (max-width: 1100px) {
+        .productos .productosCards .productosCardsCard {
+          height: 60vw; } }
+      @media screen and (max-width: 800px) {
+        .productos .productosCards .productosCardsCard {
+          height: 70vh; } }
+      @media screen and (max-width: 500px) {
+        .productos .productosCards .productosCardsCard {
+          height: 160vw; } }
+      @media screen and (max-width: 430px) {
+        .productos .productosCards .productosCardsCard {
+          height: 70vh; } }
       .productos .productosCards .productosCardsCard .productosCardsCardImage {
         height: 20vw;
         width: 100%;
@@ -509,10 +522,11 @@ header {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; }
         @media screen and (max-width: 800px) {
           .productos .productosCards .productosCardsCard .productosCardsCardImage {
-            background-position-y: 0; } }
+            background-position-y: 0;
+            height: 30vh; } }
         @media screen and (max-width: 500px) {
           .productos .productosCards .productosCardsCard .productosCardsCardImage {
-            height: 35vw; } }
+            height: 40vh; } }
       .productos .productosCards .productosCardsCard .productosCardsCardTitulo {
         font-family: "DM Sans", sans-serif;
         font-weight: 800;
@@ -522,11 +536,33 @@ header {
         font-family: "DM Sans", sans-serif;
         font-weight: 500;
         color: #2c2c2c;
-        padding: 1.2vw 1vw 0 1vw; }
+        padding: 1.2vw 1vw 0 1vw;
+        position: absolute;
+        width: 30vw; }
+        @media screen and (max-width: 800px) {
+          .productos .productosCards .productosCardsCard .productosCardsCardParrafo {
+            width: 45vw; } }
+        @media screen and (max-width: 500px) {
+          .productos .productosCards .productosCardsCard .productosCardsCardParrafo {
+            width: 90vw; } }
       .productos .productosCards .productosCardsCard .productosCardsCardPrecio {
         display: flex;
         justify-content: space-between;
-        padding: 1.2vw 1vw 1vw 1vw; }
+        padding: 1.2vw 1vw 1vw 1vw;
+        position: relative;
+        top: 10vw; }
+        @media screen and (max-width: 1100px) {
+          .productos .productosCards .productosCardsCard .productosCardsCardPrecio {
+            top: 20vw; } }
+        @media screen and (max-width: 800px) {
+          .productos .productosCards .productosCardsCard .productosCardsCardPrecio {
+            top: 35vw; } }
+        @media screen and (max-width: 500px) {
+          .productos .productosCards .productosCardsCard .productosCardsCardPrecio {
+            padding-inline: 1vw; } }
+        @media screen and (max-width: 430px) {
+          .productos .productosCards .productosCardsCard .productosCardsCardPrecio {
+            top: 40vw; } }
         .productos .productosCards .productosCardsCard .productosCardsCardPrecio .precio {
           font-family: "DM Sans", sans-serif;
           font-weight: 900;
